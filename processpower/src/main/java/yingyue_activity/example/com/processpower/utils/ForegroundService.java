@@ -40,6 +40,7 @@ public class ForegroundService extends Service {
         } else {
             notification = builder.getNotification();
         }
+        //==========================================
         //把该service创建为前台service
         startForeground(1, notification);
         //        app_Shut_down();
