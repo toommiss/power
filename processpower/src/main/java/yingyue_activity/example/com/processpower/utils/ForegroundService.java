@@ -1,5 +1,6 @@
 package yingyue_activity.example.com.processpower.utils;
 
+import android.app.Application;
 import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
@@ -21,7 +22,8 @@ public class ForegroundService extends Service {
         Notification.Builder builder = new Notification.Builder(this);
         //        builder.setContentInfo("补充内容");
         //        builder.setContentText("正在运行...");
-        builder.setContentTitle("测试应用");
+        String app_name = this.getString(R.string.app_name);
+        builder.setContentTitle(app_name);
         builder.setSmallIcon(R.drawable.ic_launcher);
         //        builder.setTicker("新消息");
         // 将AutoCancel设为true后，当你点击通知栏的notification后，它会自动被取消消失
